@@ -59,7 +59,7 @@ public class TextFieldMain2 extends JFrame implements ActionListener {
                 	lbl.setText("違います。(" + count + "回目)正解は"+ r +"です");
                 	textField.setEnabled(false);
                 }else {
-                	lbl.setText("違います。(" + count + "回目) " + min + "以上, " + max + "以下の整数を入力してください");
+                	lbl.setText("違います。もっと大きな数です。(" + count + "回目) " + min + "以上, " + max + "以下の整数を入力してください");
                 }
             } else {
                 max = i - 1;
@@ -67,7 +67,7 @@ public class TextFieldMain2 extends JFrame implements ActionListener {
                 	lbl.setText("違います。(" + count + "回目)正解は"+ r +"です");
                 	textField.setEnabled(false); 
                 }else {
-                	lbl.setText("違います。(" + count + "回目) " + min + "以上, " + max + "以下の整数を入力してください");
+                	lbl.setText("違います。もっと小さな数です。(" + count + "回目) " + min + "以上, " + max + "以下の整数を入力してください");
                 }
             }
         } catch (NumberFormatException ex) {
