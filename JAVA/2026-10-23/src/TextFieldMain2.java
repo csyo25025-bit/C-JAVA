@@ -52,30 +52,30 @@ public class TextFieldMain2 extends JFrame implements ActionListener {
             ++count;
             if(i<min||max<i) {
             	lbl1.setText("範囲外です！ (" + count + "回目) " );
-            	lbl2.setText(+ min + "以上, " + max + "以下の整数を入力してください");
+            	lbl2.setText(min + "以上, " + max + "以下の整数を入力してください");
             }else if (i == r) {
-            	lbl1.setText("正解！ \n" + count + " 回目で答えの " + r + " を当てました！");
+            	lbl1.setText("正解！" + count + " 回目で答えの " + r + " を当てました！");
             	lbl2.setText("終了");
                 textField.setEnabled(false); 
             } else if (i < r) {
                 min = i + 1;
                 if(min==max) {
                 	lbl1.setText("違います。(" + count + "回目)");
-                	lbl2.setText("正解は"+ r +"です");
+                	lbl2.setText("正解は"+ r +"でした");
                 	textField.setEnabled(false);
                 }else {
                 	lbl1.setText("違います。もっと大きな数です。(" + count + "回目)" );
-                	lbl2.setText(+ min + "以上, " + max + "以下の整数を入力してください");
+                	lbl2.setText(min + "以上, " + max + "以下の整数を入力してください");
                 }
             } else {
                 max = i - 1;
                 if(max==min) {
                 	lbl1.setText("違います。(" + count + "回目)");
-                	lbl2.setText("正解は"+ r +"です");
+                	lbl2.setText("正解は"+ r +"でした");
                 	textField.setEnabled(false); 
                 }else {
                 	lbl1.setText("違います。もっと小さな数です。(" + count + "回目)");
-                	lbl2.setText(+ min + "以上, " + max + "以下の整数を入力してください");
+                	lbl2.setText(min + "以上, " + max + "以下の整数を入力してください");
                 }
             }
         } catch (NumberFormatException ex) {
